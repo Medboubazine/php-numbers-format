@@ -2,34 +2,49 @@
 namespace Medboubazine\NumberFormatter\Parse;
 class NumberFormatParse
 {
+
 /**
- * 
- * constructor
- * 
+ * __construct
+ *
+ * @param  float $number
+ * @return void
  */
 public function __construct($number){
     $this->number = $number;
 }
 /**
- * 
- * Number
- * 
+ * __toString
+ *
+ * @return float
+ */
+public function __toString(){
+    return $this->number;
+}
+/**
+ * number
+ *
+ * @var int
  */
 protected $number = 0;
 /**
- * 
- * Parse number
- * 
+ * get
+ *
+ * @param  float $decimals
+ * @return void
  */
 public function get(int $decimals = null){
     return ($decimals) ? $this->number_format($this->number,$decimals) : (float) $this->number;
 }
 /**
- * 
- * Number format function
- * 
+ * number_format
+ *
+ * @param  float $number
+ * @param  int $decimals
+ * @param  string $dec_point
+ * @param  string $thousands_sep
+ * @return float
  */
-public function number_format(float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = ""){
+protected function number_format(float $number , int $decimals = 0 , string $dec_point = "." , string $thousands_sep = ""){
     return number_format($number,$decimals,$dec_point,$thousands_sep);
 }
 }

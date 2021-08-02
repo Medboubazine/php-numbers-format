@@ -5,23 +5,27 @@ use Medboubazine\NumberFormatter\Parse\NumberFormatParse;
 
 class NumberFormat
 {
+
 /**
- * 
- * Number
- * 
+ * number
+ *
+ * @var float
  */
 protected static $number;
+
 /**
- * 
- * 
+ * __toString
+ *
+ * @return float
  */
 public function __toString(){
     return self::$number;
 }
 /**
- * 
- * Parse number
- * 
+ * parse
+ *
+ * @param  float $number_
+ * @return object|float
  */
 public static function parse($number_){
     self::$number = $number_;
