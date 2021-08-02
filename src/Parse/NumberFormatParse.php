@@ -18,7 +18,7 @@ public function __construct($number){
  * @return float
  */
 public function __toString(){
-    return $this->number;
+    return $this->get(2);
 }
 /**
  * number
