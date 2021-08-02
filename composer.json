@@ -16,7 +16,7 @@
   	},
     "autoload": {
       "psr-4": {
-        "Medboubazine\\NumberFormatter": "src/"
+        "Medboubazine\\NumberFormatter\\": "src/"
       }
     }
 }
