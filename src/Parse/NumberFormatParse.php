@@ -49,7 +49,7 @@ class NumberFormatParse
      * @param  string $thousands_sep
      * @return float
      */
-    protected function number_format(float $number, int $decimals = 0, string $dec_point = ".", string $thousands_sep = "")
+    protected function number_format($number, int $decimals = 0, string $dec_point = ".", string $thousands_sep = "")
     {
         return number_format($number, $decimals, $dec_point, $thousands_sep);
     }
